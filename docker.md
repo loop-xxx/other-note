@@ -122,7 +122,7 @@ image [command [args]]
 
 # 创建数据卷容器简化数据卷配置
 # 创建一个数据卷容器
-docker run -it -d -v /volume_dir_or_file_name --name data_volume centos:7
+docker run -it -d -v /root/volume_dir:/volume_dir --name data_volume centos:7
 # 创建容器时, 通过数据卷容器配置数据卷
 docker run -it -d --volumes-from data_volume --name c1 centos:7
 docker run -it -d --volumes-from data_volume --name c2 centos:7
